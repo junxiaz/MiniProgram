@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<z-swiper list="{{banners}}" />
+
+<z-recommend recommends="{{recommends}}"></z-recommend>
+
+<z-popular></z-popular>
+
+<z-tab-control titles="{{titles}}"
+              bind:tabclick="handleTabClick"></z-tab-control>
+
+<view class="goods">
+  <block wx:for="{{goods[currentType]}}" wx:kry="index">
+    <view>{{item.title}}</view>
+  </block>
+</view>
